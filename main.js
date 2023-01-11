@@ -13,8 +13,8 @@ let sentence = 'Hola soy Edu Feliz Navidad';
 function noVowels(str){
     let vocales = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
 
-    for(let i = 0; i < vocales.length ; i++){
-        str = str.replaceAll(vocales[i], "");
+    for (let i of vocales){
+        str = str.replaceAll(i, "");
     }
     
     return(str);
@@ -78,8 +78,8 @@ let numberList = [1,2,-1,3,5,7];
 function sumList(list){
     let sum = 0;
 
-    for (let i in list) {
-        sum += list[i];
+    for (let i of list) {
+        sum += i;
     }
 
     return(sum);
@@ -107,10 +107,10 @@ function winner(list){
     let maxPoints = 0;
     let bestPlayer;
 
-    for (let i in list){
-        if(list[i].score > maxPoints){
-            maxPoints = list[i].score;
-            bestPlayer = list[i];
+    for (let i of list){
+        if(i.score > maxPoints){
+            maxPoints = i.score;
+            bestPlayer = i;
         }
     }
     
